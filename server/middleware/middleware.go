@@ -8,6 +8,7 @@ import (
 	"net/http"
 
 	"../models"
+	"../secrets"
 
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"
@@ -18,7 +19,6 @@ import (
 // DB connection string
 // for localhost mongoDB
 // const connectionString = "mongodb://localhost:27017"
-const connectionString = "Connection String"
 
 // Database Name
 const dbName = "test"
@@ -31,7 +31,7 @@ var collection *mongo.Collection
 
 // create connection with mongo db
 func init() {
-
+	connectionString := secrets.CreateConnectionData().ConnectionString
 	// Set client options
 	clientOptions := options.Client().ApplyURI(connectionString)
 
