@@ -1,0 +1,15 @@
+.flex {
+  display: flex
+}
+
+.flex-end {
+  justify-content: flex-end;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.font-white {
+  color: #fff;
+}

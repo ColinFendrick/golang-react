@@ -10,12 +10,15 @@ const undoTask = id => http.put(`/api/undoTask/${id}`);
 
 const deleteTask = id => http.delete(`/api/task/${id}`);
 
+const deleteAllTasks = () => http.delete('/api/task');
+
 const TaskService = {
 	getAllTasks,
 	createTask,
 	updateTask,
 	undoTask,
-	deleteTask
+	deleteTask,
+	deleteAllTasks
 };
 
 export default TaskService;

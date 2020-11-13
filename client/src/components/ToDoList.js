@@ -18,7 +18,7 @@ const ToDoList = () => {
 	const onSubmit = async () => {
 		if (state.task) {
 			try {
-				await TaskService.createTask();
+				await TaskService.createTask({ task: state.task });
 				getTask();
 				setState({ ...state, task: '' });
 			} catch (e) {
