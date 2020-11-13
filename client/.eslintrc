@@ -41,7 +41,7 @@
       }
     ],
     "comma-dangle": ["error", "never"],
-    "no-unused-vars": ["error", {
+    "no-unused-vars": ["warn", {
       "vars": "local"
     }],
     "linebreak-style": [

@@ -1,7 +1,13 @@
+import { Container } from 'semantic-ui-react';
+
+import { ToDoList } from './components';
+
 const App = () => {
 	return (
-		<div className='App'>
-      App
+		<div>
+			<Container>
+				<ToDoList />
+			</Container>
 		</div>
 	);
 };
